@@ -15,23 +15,34 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    width: 700px;  /* Ajustado para gráficos más grandes */
+    max-width: 100%;  /* Asegura que no sobrepase el ancho de la pantalla */
 }
 
 .chart-container {
     margin-top: 20px;
-    height: 300px;
+    height: auto;  /* Permitir que la altura sea automática según el gráfico */
+    max-height: 400px; /* Altura máxima ajustada */
     position: relative;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 10px;
     transition: transform 0.5s ease;
     opacity: 0;
+    display: flex;
+    justify-content: center;  /* Centrar la imagen horizontalmente */
+    align-items: center;      /* Centrar la imagen verticalmente */
 }
 
 .chart-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+img {
+    max-width: 100%;  /* Asegura que la imagen no exceda el ancho del contenedor */
+    max-height: 100%; /* Asegura que la imagen no exceda la altura del contenedor */
+    object-fit: contain;  /* Ajustar la imagen para mantener su relación de aspecto */
 }
 
 h1 {

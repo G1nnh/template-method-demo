@@ -1,27 +1,31 @@
+// chartGenerator.js
 export class ChartGenerator {
     constructor() {
         this.chartContainer = document.getElementById('chartContainer');
-        this.chart = null;
     }
 
     generateChart() {
         this.prepareData();
         this.clearChart();
         this.drawChart();
+        this.showChart();
     }
 
     prepareData() {
         console.log("Preparando los datos...");
-        const table = document.getElementById('dataTable');
-        const rowData = Array.from(table.rows[1].cells);
-        this.labels = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'];
-        this.data = rowData.slice(1).map(cell => parseInt(cell.textContent));
     }
 
     clearChart() {
-        if (this.chart) {
-            this.chart.destroy();
-        }
+        this.chartContainer.innerHTML = '';
+        this.chartContainer.style.opacity = 0;
+        this.chartContainer.style.transform = 'translateY(20px)';
+    }
+
+    showChart() {
+        setTimeout(() => {
+            this.chartContainer.style.opacity = 1;
+            this.chartContainer.style.transform = 'translateY(0)';
+        }, 300);
     }
 
     drawChart() {

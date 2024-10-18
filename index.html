@@ -1,61 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulación de Gráficos</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Gráficos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="container">
-    <h1>Generador de Reportes Gráficos</h1>
-    <form id="chartForm">
-      <label for="chartType">Selecciona el tipo de gráfico:</label>
-      <select id="chartType" name="chartType" required>
-        <option value="bar">Gráfico de Barras</option>
-        <option value="line">Gráfico de Líneas</option>
-        <option value="pie">Gráfico de Torta</option>
-      </select>
-      <button type="submit">Generar Gráfico</button>
-    </form>
-
-    <!-- Tabla de datos -->
-    <table id="dataTable">
-      <thead>
-        <tr>
-          <th>Año</th>
-          <th>Enero</th>
-          <th>Febrero</th>
-          <th>Marzo</th>
-          <th>Abril</th>
-          <th>Mayo</th>
-          <th>Junio</th>
-          <th>Julio</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2023</td>
-          <td>65</td>
-          <td>8</td>
-          <td>90</td>
-          <td>81</td>
-          <td>56</td>
-          <td>55</td>
-          <td>40</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div id="chartContainer" class="chart-container">
-      <!-- Aquí se generará el gráfico -->
-      <canvas id="myChart"></canvas>
+    <div class="container">
+        <h1>Generador de Reportes Gráficos</h1>
+        <form id="chartForm">
+            <label for="chartType">Selecciona el tipo de gráfico:</label>
+            <select id="chartType" name="chartType" required>
+                <option value="bar">Gráfico de Barras</option>
+                <option value="line">Gráfico de Líneas</option>
+                <option value="pie">Gráfico de Torta</option>
+            </select>
+            <button type="submit">Generar Gráfico</button>
+        </form>
+        <div id="chartContainer" class="chart-container">
+            <!-- Aquí se generará el gráfico -->
+        </div>
     </div>
-  </div>
-  <script type="module" src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
-
 </html>
